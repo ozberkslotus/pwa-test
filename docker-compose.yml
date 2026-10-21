@@ -1,0 +1,10 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        # Gerçek backend adresi; boş bırakılırsa uygulama mock modda çalışır
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-}
+    ports:
+      - "6000:6000"
+    restart: unless-stopped

@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  // Docker imajı için kendi kendine yeten minimal sunucu çıktısı
+  output: "standalone",
   // Ant Design ikonlarını sadece kullanılanlarla paketler
   experimental: {
     optimizePackageImports: ["antd", "@ant-design/icons"],

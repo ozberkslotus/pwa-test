@@ -2,7 +2,7 @@
 // label: sekme altındaki kısa ad, title: üst bardaki tam ad.
 export const APP_ROUTES = [
   { href: "/regional-performance", label: "Bölgesel", title: "Bölgesel Performans" },
-  { href: "/outages", label: "Kesintiler", title: "Kesintiler" },
+  { href: "/outages", label: "Kesintiler", title: "Kesintiler & Aboneler" },
   { href: "/heatmap", label: "Yoğunluk", title: "Yoğunluk Haritası" },
   { href: "/feeders", label: "Fiderler", title: "Fiderler" },
 ] as const;

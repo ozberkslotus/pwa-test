@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from "next";
+import { InstallPrompt } from "@/components/InstallPrompt";
 import { MobileShell } from "@/components/MobileShell";
 import { Providers } from "@/components/Providers";
 import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
+import { INSTALL_PROMPT_SNIPPET } from "@/lib/pwa-install";
 import "./globals.css";
 
 const APP_NAME = "Mobil PWA";
@@ -35,9 +37,14 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="tr">
+      <head>
+        {/* Kurulum olayı React hydrate olmadan gelebilir, erken yakalıyoruz */}
+        <script dangerouslySetInnerHTML={{ __html: INSTALL_PROMPT_SNIPPET }} />
+      </head>
       <body>
         <Providers>
           <MobileShell>{children}</MobileShell>
+          <InstallPrompt />
         </Providers>
         <ServiceWorkerRegister />
       </body>

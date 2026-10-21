@@ -5,8 +5,7 @@ export const metadata: Metadata = { title: "Fiderler" };
 export default function Page() {
   return (
     <main className="flex flex-1 flex-col px-5 pb-6">
-      <div className="flex flex-1 items-center justify-center rounded-2xl border border-dashed border-brand/30 bg-brand-light p-6 text-center">
-        <p className="text-[15px] leading-relaxed text-brand-dark">Fider listesi buraya gelecek.</p>
+      <div className="flex flex-1 flex-col  rounded-2xl border-brand/30 bg-gray-100 p-1 gap-1">
       </div>
     </main>
   );

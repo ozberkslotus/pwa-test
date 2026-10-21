@@ -6,12 +6,7 @@ export default function Page() {
   return (
     <main className="flex flex-1 flex-col px-5 pb-6">
       <div className="flex flex-1 flex-col  rounded-2xl border-brand/30 bg-gray-100 p-1 gap-1">
-        <div>
-          1.Grafik
-        </div>
-        <div>
-          2. Grafik
-        </div>
+       
       </div>
     </main>
   );
